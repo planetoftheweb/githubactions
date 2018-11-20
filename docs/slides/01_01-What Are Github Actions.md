@@ -56,7 +56,7 @@ Before we build anything, let's talk about how you can get access to actions.
 <!-- .slide: data-state="title" -->
 
 # Github Actions
-How Actions Work
+Preparing a Project
 
 > > Author Notes:
 Before we create an action, we need to prepare some things. We'll start by creating a repository and upload some files.
@@ -72,9 +72,8 @@ DEMO:
 ---
 
 ## Anatomy of an Action
-- Workflows groups
-- GUI
-- Editor
+- Workflow groups
+- GUI/Editor
 - Events
 
 > > Author Notes:
@@ -82,6 +81,8 @@ DEMO:
 - Although grouped into a structure called a workflow. A workflow is just a series of related actions. If you look at the tabs at the top of this interface you'll notice that a file called main.workflow was created and will be placed inside a `.github` folder.  You may have seen this folder before if you create things like issue or pull request templates.
 
 - Actions are built with a GUI...Graphical User Interface tool as well as by manually typing in code. The GUI will get you up and running quickly and let you visualize your actions even if you like to create them with just text.
+
+- DEMO
 
 - You can see under the file section that we have the option of looking at the visual editor, or edit the file directly in text. If you switch over to the `edit` tab, you'll notice that it's automatically generating the code for the workflow for you.
 
