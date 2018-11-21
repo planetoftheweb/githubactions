@@ -133,8 +133,9 @@ Let's choose to work with a preb-built action from Zeit. You can find a director
 ---
 
 ## Action Options
-- Adding actions
 - Label
+- Needs
+- Uses
 - Runs
 - Arguments
 - Secrets/Env
@@ -162,3 +163,12 @@ Let's choose to work with a preb-built action from Zeit. You can find a director
 - Deploy
 - Make a change in the code
 - Re-deploy
+
+```
+{
+  "name": "flicka",
+  "alias": [
+    "watoose"
+  ]
+}
+```
