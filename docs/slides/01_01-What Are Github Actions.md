@@ -1,32 +1,32 @@
 <!-- .slide: data-state="title" -->
 
-# Github Actions
+# GitHub Actions
 
 > > Author Notes:
-Developers don't like spending time doing repetitive tasks. That's because they understand computers are faster at repeating a set of instructions. Hey there, I'm Ray Villalobos and in this short course I'm going to give you an early look at new way of automating workflows using a feature from Github called Actions. We'll also build a workflow that uses actions to automatically publish your site to the Now Platform when you push a new commit to your master branch.
+Developers don't like spending time doing repetitive tasks. That's because they understand computers are faster at repeating a set of instructions. Hey there, I'm Ray Villalobos and in this short course I'm going to give you an early look at new way of automating workflows using a feature from GitHub called Actions. We'll also build a workflow that uses actions to automatically publish your site to the Now Platform when you push a new commit to your master branch.
 
 ---
 
-## What are Github Actions?
+## What are GitHub Actions?
 
-- Automate Github
+- Automate GitHub
 - Triggered by events
-- Integrated into Github
+- Integrated into GitHub
 
 > > Author Notes:
-- Actions are a set of instructions that help you atomate Github processes.
+- Actions are a set of instructions that help you atomate GitHub processes.
 
-- They run as a result of Github events. So for example, you can do things when something happens...like a push to a repo, creating an issue, or when someone does a pull and then execute automation based on those events. Once you capture the event, you can run tests, generate builds and deploy your site onto a server automatically.
+- They run as a result of GitHub events. So for example, you can do things when something happens...like a push to a repo, creating an issue, or when someone does a pull and then execute automation based on those events. Once you capture the event, you can run tests, generate builds and deploy your site onto a server automatically.
 
-- Actions are integrated and run within Github servers, so you don't need a separate Continuous Integration or Continuous delivery platform to perform tasks...you can just build them yourself.
+- Actions are integrated and run within GitHub servers, so you don't need a separate Continuous Integration or Continuous delivery platform to perform tasks...you can just build them yourself.
 
 
-So if building your own tools to automate your workflows and make your life a bit easier is something that appeals to you, then it's time to take a look at Github Actions.
+So if building your own tools to automate your workflows and make your life a bit easier is something that appeals to you, then it's time to take a look at GitHub Actions.
 
 ---
 <!-- .slide: data-state="title" -->
 
-# Github Actions
+# GitHub Actions
 Getting Access
 
 > > Author Notes:
@@ -42,20 +42,20 @@ Before we build anything, let's talk about how you can get access to actions.
 
 > > Author Notes:
 
-- As of the recording of this video, Github Actions is a feature that is under Public Beta. Which means that it's not completely ready for production access. Be careful when trying to use this on your applications because things might be changing quickly.
+- As of the recording of this video, GitHub Actions is a feature that is under Public Beta. Which means that it's not completely ready for production access. Be careful when trying to use this on your applications because things might be changing quickly.
 
 - Also, right now, actions can only run in private repos, but I expect this to change soon. However that means that to play around with them you're going to need to have a paid account and that you won't be able to use them or even see them even with a paid account in public repositories.
 
 - In order to use actions, you'll need to request access to them. you can do that at this URL (overlay). Access is limited, so don't expect to have access to them immediately. However, more and more users will be added as time passes.
 
-- To see if you have access to actions, go to one of your private repositories and look for the actions tab at the top of your Github repository page.
+- To see if you have access to actions, go to one of your private repositories and look for the actions tab at the top of your GitHub repository page.
 
 - You can find the documentation for Actions at this URL.
 
 ---
 <!-- .slide: data-state="title" -->
 
-# Github Actions
+# GitHub Actions
 Preparing a Project
 
 > > Author Notes:
@@ -86,7 +86,7 @@ DEMO:
 
 - You can see under the file section that we have the option of looking at the visual editor, or edit the file directly in text. If you switch over to the `edit` tab, you'll notice that it's automatically generating the code for the workflow for you.
 
-- The workflows are triggered by Github events and the default event as you can see in the sample workflow is the `push`. This action will execute when a collaborator pushes something to this repo. You can respond to other events and change the name of the workflow if you want. Click on the `edit` button and you'll see a form that lets you modify the name of the workflow as well as a dropdown with a comprehensive list of events that can trigger the workflow.
+- The workflows are triggered by GitHub events and the default event as you can see in the sample workflow is the `push`. This action will execute when a collaborator pushes something to this repo. You can respond to other events and change the name of the workflow if you want. Click on the `edit` button and you'll see a form that lets you modify the name of the workflow as well as a dropdown with a comprehensive list of events that can trigger the workflow.
 
 ---
 
@@ -146,11 +146,11 @@ Let's choose to work with a preb-built action from Zeit. You can find a director
 
 - **Label:** The label is just the name of the action. It's going to give you a default name based on what you pick, but call it whatever you want.
 
-- **Runs:** Github actions run from a set of instructions called a `dockerfile`, so this lets you execute a specific command in that file...If you don't put anything in here, whatever is defined as your `dockerfile`'s entry point will run.
+- **Runs:** GitHub actions run from a set of instructions called a `dockerfile`, so this lets you execute a specific command in that file...If you don't put anything in here, whatever is defined as your `dockerfile`'s entry point will run.
 
 - **Args:** Another way to customize your execution is by passing along arguments. These are like settings for options you want to pass along to the `dockerfile`. You can use a string or an array here., A string with a series of commands separated by spaces will automatically convert to an array.
 
-- **Secrets and Env:** Secrets is where you store information that you don't want to be publicly available and stored in your repo, so logins, password or security information. You can also use this section to set environment variables. Settings are only available in the visual editor or in the settings tab of your repository. You might see that we have the option of including a Github Token here. You can also create your own secrets.
+- **Secrets and Env:** Secrets is where you store information that you don't want to be publicly available and stored in your repo, so logins, password or security information. You can also use this section to set environment variables. Settings are only available in the visual editor or in the settings tab of your repository. You might see that we have the option of including a GitHub Token here. You can also create your own secrets.
 
 ---
 
